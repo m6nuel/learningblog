@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google"; fuente predeterminada
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import { montserrat } from "./ui/fonts";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.className} antialiased`}> {/* de esta manera se importa la fuente */}
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
