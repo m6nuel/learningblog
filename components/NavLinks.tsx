@@ -14,19 +14,19 @@ const NavLinks = () => {
   return (
     <>
       <Link
-        className={`text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium`}
+        className={`text-white hover:bg-gray-700 hover:text-white rounded-md mx-3 px-3 py-2 text-sm font-medium ${pathname === '/' ? 'bg-gray-600' : ''}`}
         href='/'
-      >
+      > 
         Home
       </Link>
       <Link
-        className={`text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium`}
+        className={`text-white hover:bg-gray-700 hover:text-white rounded-md mx-3 px-3 py-2 text-sm font-medium ${pathname === '/dashboard' ? 'bg-gray-600' : ''}`}
         href='/dashboard'
       >
         Dashboard
       </Link>
       <Link
-        className={`text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium`}
+        className={`text-white hover:bg-gray-700 hover:text-white rounded-md mx-3 px-3 py-2 text-sm font-medium ${pathname === '/todo' ? 'bg-gray-600' : ''}`}
         href='/todo'
       >
         ToDo
