@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { montserrat } from "./ui/fonts";
+import Provider from "./Provider";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} antialiased`}> {/* de esta manera se importa la fuente */}
-        <NavBar />
-        {children}
+          <Provider>
+            <NavBar />
+            {children}
+          </Provider>
       </body>
     </html>
   );
